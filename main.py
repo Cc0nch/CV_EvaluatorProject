@@ -4,27 +4,24 @@ import google.generativeai as genai
 from pathlib import Path
 import json
 
+
 genai.configure(api_key="YOUR_API_KEY_HERE")
-model = genai.GenerativeModel("gemini-1.5-flash")
-TEMPERATURE = 0.3
 
-input_dir = Path("sample_inputs")
-output_dir = Path("outputs")
-output_dir.mkdir(exist_ok=True)
 
-jd_text = (input_dir / "jd.txt").read_text(encoding="utf-8")
+model = genai.GenerativeModel("gemini-2.5-flash")
 
-cv_files = ["cv1.txt", "cv2.txt", "cv3.txt"]
 
-for cv_file in cv_files:
-    cv_text = (input_dir / cv_file).read_text(encoding="utf-8")
+jd_text = Path("sample_inputs/jd.txt").read_text(encoding="utf-8")
 
+
+def evaluate_cv(cv_path, output_json_path):
+    cv_text = Path(cv_path).read_text(encoding="utf-8")
+
+ 
     prompt = f"""
 Tu esi HR asistents, kurš analizē kandidāta CV un salīdzina to ar darba aprakstu.
 
-Tavs uzdevums ir izvērtēt, cik labi kandidāts atbilst darba aprakstam, un sniegt rezultātu **tikai JSON formātā** ar šādu struktūru:
-
-```json
+Sniedz rezultātu tikai JSON formātā ar šādu struktūru:
 {{
   "match_score": 0-100,
   "summary": "Īss apraksts, cik labi CV atbilst JD.",
@@ -36,3 +33,29 @@ Tavs uzdevums ir izvērtēt, cik labi kandidāts atbilst darba aprakstam, un sni
   ],
   "verdict": "strong match | possible match | not a match"
 }}
+
+---
+## Darba apraksts (JD)
+{jd_text}
+
+---
+## Kandidāta CV
+{cv_text}
+
+Lūdzu, atbildi tikai JSON formātā, bez papildu komentāriem.
+"""
+
+    
+    response = model.generate_content(prompt, generation_config={"temperature": 0.3})
+
+    
+    Path(output_json_path).write_text(response.text, encoding="utf-8")
+    print(f"✅ Saglabāts: {output_json_path}")
+
+
+evaluate_cv("sample_inputs/cv1.txt", "outputs/cv1.json")
+evaluate_cv("sample_inputs/cv2.txt", "outputs/cv2.json")
+evaluate_cv("sample_inputs/cv3.txt", "outputs/cv3.json")
+
+print("🎉 Visi trīs CV ir novērtēti!")
+
