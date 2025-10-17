@@ -1,0 +1,19 @@
+{
+  "match_score": 45,
+  "summary": "Jāņa Kļaviņa CV daļēji atbilst Digitālā mārketinga speciālista amata aprakstam. Viņam ir pamatzināšanas un pieredze dažās jomās, piemēram, sociālo tīklu satura ievietošanā un nelielās SEO aktivitātēs, taču trūkst nepieciešamās pieredzes ilguma un padziļinātu prasmju vairākās galvenajās prasībās, kas nepieciešamas speciālista līmeņa amatam.",
+  "strengths": [
+    "Ir pieredze sociālo tīklu satura ievietošanā (Facebook, Instagram).",
+    "Ir pamatzināšanas Google Ads.",
+    "Piemīt labas komunikācijas un rakstīšanas prasmes latviešu valodā.",
+    "Ir atbilstoša izglītība mārketinga jomā."
+  ],
+  "missing_requirements": [
+    "Trūkst vismaz 2 gadu pieredzes digitālajā mārketingā (ir 1,5 gadi).",
+    "Nav skaidri norādīta pieredze ar Meta Business Suite un e-pasta mārketinga kampaņu izstrādi un īstenošanu.",
+    "Pieredze SEO jomā ir aprakstīta kā 'nelielas aktivitātes', kas var nebūt pietiekama mājaslapas optimizācijai.",
+    "Nav minēta prasme izmantot Google Analytics vai līdzīgus rīkus kampaņu rezultātu analīzei un atskaišu sagatavošanai.",
+    "Nav pieredzes ar e-pasta automatizācijas rīkiem (Mailchimp, HubSpot), kas ir norādīta kā priekšrocība.",
+    "Nav skaidri norādīta pieredze satura stratēģijas veidošanā un uzturēšanā, īpaši LinkedIn, kā arī kampaņu rezultātu analīzē un atskaišu sagatavošanā."
+  ],
+  "verdict": "not a match"
+}

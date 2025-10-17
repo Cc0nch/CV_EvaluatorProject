@@ -1,0 +1,20 @@
+{
+  "match_score": 5,
+  "summary": "Andra Bērziņa CV praktiski neatbilst Digitālā mārketinga speciālista amata aprakstam. Viņa pieredze ir pilnībā saistīta ar mazumtirdzniecības pārdošanu un klientu apkalpošanu, un viņam trūkst jebkādas tiešas pieredzes vai prasmju digitālā mārketinga jomā, kas ir galvenās prasības šim amatam.",
+  "strengths": [
+    "Labas komunikācijas prasmes (no pārdošanas pieredzes).",
+    "Spēja strādāt komandā (minēts prasmēs, kas varētu būt noderīgi sadarbībai ar citām komandām).",
+    "Latviešu valodas zināšanas."
+  ],
+  "missing_requirements": [
+    "Vismaz 2 gadu pieredze digitālajā mārketingā (ir 5 gadi mazumtirdzniecībā).",
+    "Zināšanas Google Ads, Meta Business Suite un SEO.",
+    "Prasme izmantot Google Analytics vai līdzīgus rīkus.",
+    "Pieredze digitālā mārketinga kampaņu izstrādē un īstenošanā (Google Ads, Meta, e-pasta mārketings).",
+    "Pieredze mājaslapas SEO un analītikas optimizēšanā.",
+    "Pieredze satura stratēģijas veidošanā un uzturēšanā sociālajos tīklos.",
+    "Pieredze kampaņu rezultātu analīzē un atskaišu sagatavošanā.",
+    "Pieredze ar e-pasta automatizācijas rīkiem (Mailchimp, HubSpot)."
+  ],
+  "verdict": "not a match"
+}
